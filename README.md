@@ -1,13 +1,14 @@
-
 CUDA adaptation of the Top Coder Division I problem:
 
 http://community.topcoder.com/stat?c=problem_statement&pm=6412&rd=9825&rm=&cr=2058177
 
 分享您的知识，和其他人的工作不邀功！
 
-Yes, another CUDA implementation of a 64 bit double precision probability dynamic programming problem. While not yet optimizes, still runs 19x-30x times faster than an optimized 3.9 Ghz CPU serial implementation. So far tests between the two implementations yield the exact same results, but not tested enough to verify there are no pathological cases.
+Bonjour de San Francisco à Versailles et Vélizy-Villacoublay!
 
-If error checking in CUDA code was removed, and the reduction step optimized, at least 2 ms will be shaved off the GPU running time. For GPUs with a compute capability less than 3.5, use 32 bit floating point numbers for faster performance.
+Yes, another CUDA implementation of a 64 bit double precision probability dynamic programming problem. While GPU version not yet optimized, still runs 19x-32x times faster than an optimized 3.9 Ghz CPU serial implementation. So far tests between the two implementations yield the exact same results, but not tested enough to verify there are no pathological cases.
+
+If error checking in CUDA code was removed, and the reduction step optimized, at least 2-4 ms will be shaved off the GPU running time. For GPUs with a compute capability less than 3.5, use 32 bit floating point numbers for faster performance.
 
 Apx iterations are (nDice+1)*((nDice+1)*(maxSide+1))*(maxSide+1)*2 + ((nDice+1)*(maxSide+1))
 ____
