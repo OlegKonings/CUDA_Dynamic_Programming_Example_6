@@ -10,7 +10,7 @@ Yes, another CUDA implementation of a 64 bit double precision probability dynami
 
 If error checking in CUDA code was removed, and the reduction step optimized, at least 2-4 ms will be shaved off the GPU running time. For GPUs with a compute capability less than 3.5, use 32 bit floating point numbers for faster performance.
 
-Apx iterations are (nDice+1)*((nDice+1)*(maxSide+1))*(maxSide+1)*2 + ((nDice+1)*(maxSide+1))
+Apx iterations are (nDice+1)x((nDice+1)x(maxSide+1))x(maxSide+1)x2 + ((nDice+1)x(maxSide+1))
 ____
 <table>
 <tr>
